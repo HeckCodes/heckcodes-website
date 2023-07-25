@@ -1,0 +1,72 @@
+---
+interface Props {
+  name: string;
+  desc: string;
+  imagePath: string;
+  url: string;
+}
+
+const { name, desc, imagePath, url } = Astro.props as Props;
+---
+
+<a href={url} target="_blank" rel="noopener noreferrer">
+  <div class="card">
+    <div class="row">
+      <img class="image" src={imagePath} alt={name} />
+      <div class="col">
+        <h3>{name}</h3>
+        <p>{desc}</p>
+      </div>
+    </div>
+  </div>
+</a>
+
+<style>
+  a {
+    all: unset;
+  }
+
+  .card {
+    background-color: var(--secondary);
+    padding: 16px;
+    margin: 16px;
+    border-radius: 16px;
+    border: 1px solid;
+    border-color: transparent;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    border: 1px solid;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .col {
+    margin-left: 16px;
+  }
+
+  img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 700px) {
+    .row {
+      flex-direction: column;
+    }
+
+    .col {
+      text-align: center;
+      margin: 0;
+    }
+  }
+</style>

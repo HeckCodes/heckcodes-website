@@ -1,0 +1,64 @@
+---
+import presentation from "../data/presentation_data";
+---
+
+<div id="about" class="about-container">
+  <h1>Hi, I'm HeckCodes 👋🏻</h1>
+  <p class="description">
+    Welcome to my personal website! I'm
+    <span class="text-accent">Chandramauli Shastri,</span>
+    a tech enthusiast on a quest for creative solutions. Join me as I showcase my
+    passion for problem-solving and share my projects, driven by expertise in
+    <span class="text-accent">C++ and Flutter/Dart</span> and more.
+  </p>
+
+  <ul class="socials">
+    {
+      presentation.socials.map((social) => (
+        <>
+          <li>
+            <a href={social.link} target="_blank" rel="noopener noreferrer">
+              {social.label}
+            </a>
+          </li>
+        </>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  .about-container {
+    max-width: 450px;
+  }
+
+  .description {
+    line-height: 1.5;
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .socials {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .socials li {
+    padding-top: 16px;
+    padding-right: 20px;
+  }
+
+  a {
+    all: unset;
+  }
+
+  a:hover {
+    color: var(--primary);
+    cursor: pointer;
+    transition: 500ms;
+  }
+</style>

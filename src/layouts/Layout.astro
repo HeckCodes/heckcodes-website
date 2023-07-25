@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="HeckCodes" />
+    <meta
+      name="description"
+      content="A personal website showcasing various projects by HeckCodes. Explore the projects and get inspired."
+    />
+    <meta
+      name="keywords"
+      content="HeckCodes, personal website, project showcase, coding projects, web development"
+    />
+    <meta name="author" content="HeckCodes" />
+    <meta property="og:title" content="HeckCodes" />
+    <meta
+      property="og:description"
+      content="A personal website showcasing various projects by HeckCodes. Explore the projects and get inspired."
+    />
+    <meta
+      property="og:image"
+      content="https://heck-codes.web.app/website.png"
+    />
+    <meta property="og:image:alt" content="Website Image" />
+    <meta property="og:url" content="https://heck-codes.web.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="HeckCodes" />
+    <meta
+      property="twitter:description"
+      content="A personal website showcasing various projects by HeckCodes. Explore the projects and get inspired."
+    />
+    <meta
+      property="twitter:image"
+      content="https://heck-codes.web.app/website.png"
+    />
+    <meta property="twitter:image:alt" content="Website Image" />
+    <meta property="twitter:url" content="https://heck-codes.web.app" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>HeckCodes</title>
+  </head>
+  <body id="theme-body" class="theme1">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  .theme1 {
+    --text: #fafafa;
+    --background: #050505;
+    --primary: #236c65;
+    --secondary: #0c272477;
+    --accent: #8cd9d1;
+  }
+
+  .theme2 {
+    --text: #f4dce5;
+    --background: #230b14;
+    --primary: #b63a69;
+    --secondary: #1f0a1277;
+    --accent: #ba3b6c;
+  }
+
+  .theme3 {
+    --text: #eafbed;
+    --background: #020803;
+    --primary: #1f9837;
+    --secondary: #04150877;
+    --accent: #27be45;
+  }
+
+  .theme4 {
+    --text: #fefbfe;
+    --background: #120515;
+    --primary: #c14ad3;
+    --secondary: #12051577;
+    --accent: #a62db9;
+  }
+
+  .theme5 {
+    --text: #d2d8f9;
+    --background: #030617;
+    --primary: #d4b51c;
+    --secondary: #03061777;
+    --accent: #cbae1a;
+  }
+
+  .theme6 {
+    --text: #ecf9dc;
+    --background: #0e1604;
+    --primary: #528415;
+    --secondary: #21350977;
+    --accent: #8ddd2c;
+  }
+
+  .theme7 {
+    --text: #e5d2f9;
+    --background: #0c0316;
+    --primary: #e13fe4;
+    --secondary: #1f041277;
+    --accent: #d21e7b;
+  }
+
+  .theme8 {
+    --text: #ffffff;
+    --background: #131417;
+    --primary: #47cf73;
+    --secondary: #44485777;
+    --accent: #ffdd40;
+  }
+
+  .theme9 {
+    --text: #ffffff;
+    --background: #030302;
+    --primary: #4d4a64;
+    --secondary: #0d0b0f;
+    --accent: #626f84;
+  }
+
+  .theme10 {
+    --text: #e2e2f4;
+    --background: #0d0d21;
+    --primary: #6868c4;
+    --secondary: #0d0d21;
+    --accent: #4646b4;
+  }
+
+  .spacer {
+    display: flex;
+    width: 100%;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--text);
+    max-width: 70%;
+    margin: auto;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  @media (max-width: 700px) {
+    body {
+      background: var(--background);
+      color: var(--text);
+      max-width: 100%;
+      margin: 34px;
+      font-family: "Open Sans", sans-serif;
+    }
+  }
+</style>

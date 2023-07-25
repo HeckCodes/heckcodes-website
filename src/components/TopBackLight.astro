@@ -1,0 +1,37 @@
+<div class="back-light"></div>
+
+<style>
+  .back-light {
+    position: fixed;
+    overflow: hidden;
+    left: -500px;
+    top: -500px;
+    z-index: -1;
+    height: 1000px;
+    width: 1000px;
+    background-image: radial-gradient(circle, var(--primary), var(--secondary));
+    filter: blur(100px);
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 700px) {
+    .back-light {
+      position: fixed;
+      overflow: hidden;
+      left: -250px;
+      top: -250px;
+      z-index: -1;
+      height: 500px;
+      width: 500px;
+      background-image: radial-gradient(
+        circle,
+        var(--primary),
+        var(--secondary)
+      );
+      filter: blur(100px);
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+  }
+</style>

@@ -1,0 +1,26 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import projects from "../data/project_data";
+---
+
+<div id="projects" class="project-section">
+  <h1>Personal Projects</h1>
+  {
+    projects.map((project) => (
+      <>
+        <ProjectCard
+          name={project.name}
+          desc={project.desc}
+          url={project.url}
+          imagePath={project.imagePath}
+        />
+      </>
+    ))
+  }
+</div>
+
+<style>
+  .project-section {
+    margin-top: 72px;
+  }
+</style>
