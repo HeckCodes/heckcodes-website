@@ -17,10 +17,6 @@ const skills: Skill[] = [
         imgPath: "python.png"
     },
     {
-        label: "Javascript",
-        imgPath: "javascript.png"
-    },
-    {
         label: "Flutter",
         imgPath: "flutter.png"
     },
