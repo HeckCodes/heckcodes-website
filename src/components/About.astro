@@ -1,5 +1,6 @@
 ---
 import presentation from "../data/presentation_data";
+import skills from "../data/skills_data";
 ---
 
 <div id="about" class="about-container">
@@ -25,6 +26,19 @@ import presentation from "../data/presentation_data";
       ))
     }
   </ul>
+
+  <div class="skills">
+    {
+      skills.map((skill) => (
+        <>
+          <div class="tooltip">
+            <img src={skill.imgPath} alt={skill.label} />
+            <span class="tooltiptext">{skill.label}</span>
+          </div>
+        </>
+      ))
+    }
+  </div>
 </div>
 
 <style>
@@ -50,6 +64,59 @@ import presentation from "../data/presentation_data";
   .socials li {
     padding-top: 16px;
     padding-right: 20px;
+  }
+
+  .skills {
+    max-width: 450;
+    margin-top: 26px;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .skills div img {
+    margin-right: 16px;
+    height: 44px;
+    width: auto;
+    opacity: 50%;
+  }
+
+  @media (max-width: 700px) {
+    .skills div img {
+      margin-right: 4px;
+      height: 36px;
+      width: auto;
+      opacity: 50%;
+    }
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+
+    background-color: var(--secondary);
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: transparent;
+
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+
+    top: 120%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
   }
 
   a {
